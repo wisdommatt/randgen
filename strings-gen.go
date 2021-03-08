@@ -31,6 +31,10 @@ var StringAlphabetsSource string = StringLowercaseAlphabetsSource + StringUpperc
 // symbols only.
 var StringSymbolsSource string = "~`!@#$%^&*()_+-={}[]|\\;:'\",.<>/?"
 
+// StringNumbericSoure is a string generator source that contains
+// numberic characters only.
+var StringNumbericSoure string = "0123456789"
+
 // NewStringGenerator returns a new string generator object that
 // implements the StringGenerator interface.
 func NewStringGenerator() StringGenerator {

@@ -63,7 +63,7 @@ func (sg *stringGen) GenerateFromSource(source string, length int) string {
 	rand.Seed(time.Now().Unix())
 	newGeneratedRune := make([]rune, length)
 	for i := 0; i < length; i++ {
-		newGeneratedRune[i] = rune(source[rand.Intn(len(source))])
+		newGeneratedRune[i] = rune(source[rand.Intn(len(source)-1)])
 	}
 	return string(newGeneratedRune)
 }

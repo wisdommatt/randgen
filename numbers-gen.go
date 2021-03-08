@@ -15,6 +15,10 @@ type NumberGenerator interface {
 // numberGen is the object that satisfies the NumberGenerator interface.
 type numberGen struct{}
 
+// NumberSource is the source for number generator that contains
+// all the numbers.
+var NumberSource int = 1234567890
+
 // NewNumberGenerator returns a new number generator object that implements
 // the NumberGenerator interface.
 func NewNumberGenerator() NumberGenerator {

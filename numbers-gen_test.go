@@ -12,11 +12,11 @@ func TestGenerateNumberFromSource(t *testing.T) {
 		length int
 	}{
 		"first test case": {
-			source: 1234567890,
+			source: NumberSource,
 			length: 5,
 		},
 		"second test case": {
-			source: 1234567890,
+			source: NumberSource,
 			length: 10,
 		},
 	}

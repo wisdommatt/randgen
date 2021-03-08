@@ -8,8 +8,7 @@ A Golang package to generate random strings and numbers.
 ---
 
 ```
-go mod install 
-github.com/wisdommatt/randgen
+go mod install github.com/wisdommatt/randgen
 ```
 
 # Features
@@ -34,21 +33,21 @@ go 1.5
 https://pkg.go.dev/github.com/wisdommatt/randgen
 
 
-# How to use
+# How to use (examples)
 
 ---
 
-* #### Generating random strings.
+* #### Generating 10 random strings.
 
 ```go
-stringGenerator := NewStringGenerator()
-randomString := stringGenerator.GenerateFromSource(StringAlphaNumericSource, 10) // source, length
+stringGenerator := randgen.NewStringGenerator()
+randomString := stringGenerator.GenerateFromSource(randgen.StringAlphaNumericSource, 10) // source, length
 ```
 
 
-* #### Generating random numbers.
+* #### Generating 8 random numbers.
 
 ```go
-numberGenerator := NewNumberGenerator()
-randomNumbers := numberGenerator.GenerateFromSource(NumberSource, 8) // source, length
+numberGenerator := randgen.NewNumberGenerator()
+randomNumbers := numberGenerator.GenerateFromSource(randgen.NumberSource, 8) // source, 
 ```

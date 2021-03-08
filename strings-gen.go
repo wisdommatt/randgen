@@ -25,7 +25,11 @@ var StringUppercaseAlphabetsSource string = "QWERTYUIOPASDFGHJKLZXCVBNM"
 
 // StringAlphabetsSource is a string generator source that contains both uppercase and
 // lowercase alphabets only.
-var StringAlphabetsSource = StringLowercaseAlphabetsSource + StringUppercaseAlphabetsSource
+var StringAlphabetsSource string = StringLowercaseAlphabetsSource + StringUppercaseAlphabetsSource
+
+// StringSymbolsSource is a string generator source that contains
+// symbols only.
+var StringSymbolsSource string = "~`!@#$%^&*()_+-={}[]|\\;:'\",.<>/?"
 
 // NewStringGenerator returns a new string generator object that
 // implements the StringGenerator interface.

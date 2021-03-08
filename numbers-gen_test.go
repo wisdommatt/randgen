@@ -19,6 +19,10 @@ func TestGenerateNumberFromSource(t *testing.T) {
 			source: NumberSource,
 			length: 10,
 		},
+		"third test case": {
+			source: 20001,
+			length: 6,
+		},
 	}
 	numberGenerator := NewNumberGenerator()
 	for name, testCase := range testCases {

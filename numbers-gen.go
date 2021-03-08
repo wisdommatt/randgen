@@ -27,13 +27,15 @@ func NewNumberGenerator() NumberGenerator {
 
 // GenerateFromSource generates random numbers with a specified length with
 // the numbers gotten from the source.
+//
+// Note: the random number generator omits 0 from the result.
 func (ng *numberGen) GenerateFromSource(source, length int) int {
 	rand.Seed(time.Now().Unix())
 	sourceStr := strconv.Itoa(source)
 	result := make([]rune, length)
 	for i := 0; i < length; i++ {
 		randomVal := rune(sourceStr[rand.Intn(len(sourceStr)-1)])
-		if i == 0 && string(randomVal) == "0" {
+		if string(randomVal) == "0" {
 			i = 0
 			continue
 		}

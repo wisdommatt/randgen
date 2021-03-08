@@ -47,6 +47,10 @@ var StringUppercaseAlphaNumericSource string = StringUppercaseAlphabetsSource + 
 // all cases alph-numeric characters.
 var StringAlphaNumericSource string = StringLowercaseAlphaNumericSource + StringUppercaseAlphaNumericSource
 
+// StringAlphaNumericSymbolsSource is a string generator source that contains
+// all cases alph-numeric characters and symbols.
+var StringAlphaNumericSymbolsSource string = StringLowercaseAlphaNumericSource + StringUppercaseAlphaNumericSource
+
 // NewStringGenerator returns a new string generator object that
 // implements the StringGenerator interface.
 func NewStringGenerator() StringGenerator {

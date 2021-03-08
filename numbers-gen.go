@@ -3,6 +3,7 @@ package randgen
 import (
 	"math/rand"
 	"strconv"
+	"strings"
 	"time"
 )
 
@@ -32,13 +33,10 @@ func NewNumberGenerator() NumberGenerator {
 func (ng *numberGen) GenerateFromSource(source, length int) int {
 	rand.Seed(time.Now().Unix())
 	sourceStr := strconv.Itoa(source)
+	sourceStr = strings.ReplaceAll(sourceStr, "0", "9")
 	result := make([]rune, length)
 	for i := 0; i < length; i++ {
 		randomVal := rune(sourceStr[rand.Intn(len(sourceStr)-1)])
-		if string(randomVal) == "0" {
-			i = 0
-			continue
-		}
 		result[i] = randomVal
 	}
 	resultInt, _ := strconv.Atoi(string(result))

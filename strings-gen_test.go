@@ -10,25 +10,41 @@ func TestGenerateStringFromSource(t *testing.T) {
 		source string
 		length int
 	}{
-		"lowercase alphabet only source": {
-			source: "hhfjjqeduenmckebdjsxkwdxsddwd",
+		"lowercase alphabet source": {
+			source: StringLowercaseAlphabetsSource,
 			length: 10,
 		},
-		"numeric string only source": {
-			source: "1234567890",
+		"uppercase alphabet source": {
+			source: StringUppercaseAlphabetsSource,
+			length: 20,
+		},
+		"all cases alphabet source": {
+			source: StringAlphabetsSource,
 			length: 30,
 		},
-		"lowercase alpha-numeric source": {
-			source: "1234567890qwertyuiopasdfghjklzxcvbnm",
+		"symbols source": {
+			source: StringSymbolsSource,
 			length: 40,
 		},
-		"lowercase alpha-numeric and symbols source": {
-			source: "1234567890qwertyuiopasdfghjklzxcvbnm!@#$%^&*()~`_+{}[]|\\;:'\",.<>/?",
-			length: 100,
+		"numeric string source": {
+			source: StringNumbericSoure,
+			length: 15,
 		},
-		"all cases alpha-numeric and symbols source": {
-			source: "1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM!@#$%^&*()~`_+{}[]|\\;:'\",.<>/?",
-			length: 200,
+		"lowercase alpha-numeric source": {
+			source: StringLowercaseAlphaNumericSource,
+			length: 45,
+		},
+		"uppercase alpha-numeric source": {
+			source: StringUppercaseAlphaNumericSource,
+			length: 50,
+		},
+		"alphabet-numeric source": {
+			source: StringAlphaNumericSource,
+			length: 55,
+		},
+		"alpha-numeric symbols source": {
+			source: StringAlphaNumericSymbolsSource,
+			length: 60,
 		},
 	}
 	stringGenerator := NewStringGenerator()

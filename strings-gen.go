@@ -23,7 +23,9 @@ var StringLowercaseAlphabetsSource string = "qwertyuiopasdfghjklzxcvbnm"
 // only uppercase alphabets.
 var StringUppercaseAlphabetsSource string = "QWERTYUIOPASDFGHJKLZXCVBNM"
 
-// SymbolsStringSource
+// StringAlphabetsSource is a string generator source that contains both uppercase and
+// lowercase alphabets only.
+var StringAlphabetsSource = StringLowercaseAlphabetsSource + StringUppercaseAlphabetsSource
 
 // NewStringGenerator returns a new string generator object that
 // implements the StringGenerator interface.

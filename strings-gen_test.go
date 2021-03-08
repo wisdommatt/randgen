@@ -22,11 +22,11 @@ func TestGenerateStringFromSource(t *testing.T) {
 			source: "1234567890qwertyuiopasdfghjklzxcvbnm",
 			length: 40,
 		},
-		"lowercase alpha-numeric and characters source": {
+		"lowercase alpha-numeric and symbols source": {
 			source: "1234567890qwertyuiopasdfghjklzxcvbnm!@#$%^&*()~`_+{}[]|\\;:'\",.<>/?",
 			length: 100,
 		},
-		"all cases alpha-numeric and characters source": {
+		"all cases alpha-numeric and symbols source": {
 			source: "1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM!@#$%^&*()~`_+{}[]|\\;:'\",.<>/?",
 			length: 200,
 		},

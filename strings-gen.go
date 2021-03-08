@@ -15,19 +15,21 @@ type StringGenerator interface {
 // interface.
 type stringGen struct{}
 
+// StringLowercaseAlphabetsSource is a string generator source string that contains
+// only lowercase alphabets.
+var StringLowercaseAlphabetsSource string = "qwertyuiopasdfghjklzxcvbnm"
+
+// StringUppercaseAlphabetsSource is a string generator source string that contains
+// only uppercase alphabets.
+var StringUppercaseAlphabetsSource string = "QWERTYUIOPASDFGHJKLZXCVBNM"
+
+// SymbolsStringSource
+
 // NewStringGenerator returns a new string generator object that
 // implements the StringGenerator interface.
 func NewStringGenerator() StringGenerator {
 	return &stringGen{}
 }
-
-// LowercaseStringAlphabetSource is a string generator source string that contains
-// only lowercase alphabets.
-var LowercaseStringAlphabetSource string = "qwertyuiopasdfghjklzxcvbnm"
-
-// UppercaseStringAlphabetSource is a string generator source string that contains
-// only uppercase alphabets.
-var UppercaseStringAlphabetSource string = "QWERTYUIOPASDFGHJKLZXCVBNM"
 
 // GenerateFromSource generates a random string with the specified
 // length from source.

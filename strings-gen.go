@@ -21,6 +21,10 @@ func NewStringGenerator() StringGenerator {
 	return &stringGen{}
 }
 
+// LowercaseStringAlphabetSource is a string generator source string that contains
+// only lowercase alphabets.
+var LowercaseStringAlphabetSource string = "qwertyuiopasdfghjklzxcvbnm"
+
 // GenerateFromSource generates a random string with the specified
 // length from source.
 func (sg *stringGen) GenerateFromSource(source string, length int) string {

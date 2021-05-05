@@ -2,13 +2,12 @@
 
 A Golang package to generate random strings and numbers.
 
-
 # Installation
 
 ---
 
 ```
-go mod install github.com/wisdommatt/randgen
+go get github.com/wisdommatt/randgen
 ```
 
 # Features
@@ -18,20 +17,17 @@ go mod install github.com/wisdommatt/randgen
 * Generate random strings.
 * Generate random numbers.
 
-
 # Requirements
 
 ---
 
 go 1.5
 
-
 # Documentation
 
 ---
 
 https://pkg.go.dev/github.com/wisdommatt/randgen
-
 
 # How to use (examples)
 
@@ -43,7 +39,6 @@ https://pkg.go.dev/github.com/wisdommatt/randgen
 stringGenerator := randgen.NewStringGenerator()
 randomString := stringGenerator.GenerateFromSource(randgen.StringAlphaNumericSource, 10) // source, length
 ```
-
 
 * #### Generating 8 random numbers.
 

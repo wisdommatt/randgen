@@ -60,7 +60,7 @@ func NewStringGenerator() StringGenerator {
 // GenerateFromSource generates a random string with the specified
 // length from source.
 func (sg *stringGen) GenerateFromSource(source string, length int) string {
-	rand.Seed(time.Now().Unix())
+	rand.Seed(time.Now().UnixNano())
 	newGeneratedRune := make([]rune, length)
 	for i := 0; i < length; i++ {
 		newGeneratedRune[i] = rune(source[rand.Intn(len(source)-1)])

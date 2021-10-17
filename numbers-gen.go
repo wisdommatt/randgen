@@ -31,7 +31,7 @@ func NewNumberGenerator() NumberGenerator {
 //
 // Note: the random number generator omits 0 from the result.
 func (ng *numberGen) GenerateFromSource(source, length int) int {
-	rand.Seed(time.Now().Unix())
+	rand.Seed(time.Now().UnixNano())
 	sourceStr := strconv.Itoa(source)
 	sourceStr = strings.ReplaceAll(sourceStr, "0", "9")
 	result := make([]rune, length)
